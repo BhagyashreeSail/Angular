@@ -1,0 +1,11 @@
+<label>Server name</label>
+<input 
+type='text' 
+class='form-control'
+[(ngModel)]='serverName'> <!--Two way Binding  --> 
+<button
+class='btn btn-primary'
+[disabled]="!allowNewServer"   
+(click)="onCreateServer()">Add Server</button> <!--Property and Event Binding  -->
+<p>{{serverCreationStatus}}</p> <!--Expression/String Interpolation  -->
+<app-server></app-server>
